@@ -1,0 +1,259 @@
+@import 'variables';
+@font-face {
+    font-family: main;
+    src: url(../fonts/MuseoModerno/MuseoModerno-Italic-VariableFont_wght.ttf);
+    src: url(../fonts/MuseoModerno/MuseoModerno-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: all;
+    src: url(../fonts/Jura/Jura-VariableFont_wght.ttf);
+}
+@mixin forText($sizeIn, $weight: null, $color: null, $align:null) {
+    font-size: $sizeIn;
+
+    @if $weight != null {
+      font-weight: $weight;
+    }
+    @if $color != null {
+      color: $color;
+    }
+    @if $align != null {
+        text-align: $align;
+    }
+  }
+header{
+    background-color: $nav-bg-color;
+}
+@media (max-width: 768px){
+    .section {
+        flex-direction: column !important;
+      }
+    .faq{
+        cursor: none;
+    }
+    .content{
+        text-align: center;
+    }
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: $body-color;
+    color: $footer-all-rights-border-top-color;
+}
+.up{
+    @include forText(40px,null,$up-content-text-color,center);
+    animation: fadeInUp 1s ease forwards;
+    margin-top: 50px;
+}
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+}
+.section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.section img {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: $section-image-shadow;
+    flex: 1;
+    transition: transform 0.3s;
+}
+.section img:hover {
+    transform: scale(1.03);
+}
+.section .content {
+    flex: 1;
+    padding: 30px;
+    animation: fadeInRight 1.2s ease forwards;
+}
+.content h2 {
+    @include forText(32px,null,$up-content-text-color);
+    margin: 0 0 10px;
+}
+.content h3 {
+    @include forText(22px,null,$position-text-color);
+    margin: 0 0 15px;
+}
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.form-section {
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+.form-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+  input, textarea, select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: $border-form-elements;
+    font-size: 16px;
+}
+input:invalid, textarea:invalid, select:invalid {
+    border-color: $border-form-elements;
+    animation: shake 0.3s;
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+button {
+    @include forText(18px,null,white);
+    background-color: $button-color;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+button:hover {
+    background-color: $button-hover-color;
+}
+.faq {
+    margin-top: 100px;
+  }
+.testimonials{
+    padding: 15px;
+}
+.testimonials h2, .faq h2 {
+    @include forText(32px,null,null,center);
+    margin-bottom: 40px;
+}
+.testimonial {
+    background:$testimonial-bg;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: $testimonial-box-shadow;
+    margin: 0 auto 20px auto;
+    max-width: 700px;
+    animation: fadeInUp 1s ease forwards;
+    position: relative;
+}
+.testimonial::before {
+    @include forText(50px,null,$testimonial-before);
+    content: "“";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.testimonial p {
+    font-style: italic;
+    padding-left: 40px;
+}
+.testimonial strong {
+    display: block;
+    margin-top: 15px;
+    color: #555;
+    text-align: right;
+}
+details {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    max-width: 800px;
+    transition: all 0.4s ease;
+}
+details[open] {
+    background-color: #fff;
+    transform: scale(1.02);
+}
+details summary {
+    @include forText(18px,bold,#333);
+    cursor: none;
+    list-style: none;
+}
+  details summary::-webkit-details-marker {
+    display: none;
+}
+details p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(40px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+.notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.3s ease forwards;
+}
+.notification.success {
+    background-color: $notification-success-bg;
+}
+.notification.error {
+    background-color: $notification-error-bg;
+}
+.notification.show {
+    display: block;
+}
+.notification-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+  .notification-content h3 {
+    margin: 0 0 5px;
+}
+.close-notification {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.error-input {
+    border-color: $error-input-border-color;
+}
+.error-message {
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin: -15px 0 15px 0;
+}

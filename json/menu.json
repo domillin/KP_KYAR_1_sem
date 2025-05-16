@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Жасминовое наслаждение",
+    "price": "7 BYN",
+    "image": "pic/zhasmin.webp"
+  },
+  {
+    "name": "Ассам чай",
+    "price": "5 BYN",
+    "image": "pic/assam.webp"
+  },
+  {
+    "name": "С чабрецом и мятой",
+    "price": "5.5 BYN",
+    "image": "pic/chabrec.webp"
+  },
+  {
+    "name": "Вишневый пунш",
+    "price": "7 BYN",
+    "image": "pic/punsh.webp"
+  },
+  {
+    "name": "Чай матча",
+    "price": "8 BYN",
+    "image": "pic/matcha.webp"
+  },
+  {
+    "name": "Таежный сбор",
+    "price": "7 BYN",
+    "image": "pic/ефуяр.webp"
+  },
+  {
+    "name": "Мишки Гамми",
+    "price": "6.5 BYN",
+    "image": "pic/gammy.webp"
+  },
+  {
+    "name": "Горы Алтая",
+    "price": "6 BYN",
+    "image": "pic/altay.webp"
+  },
+  {
+    "name": "1001 ночь",
+    "price": "10.01 BYN",
+    "image": "pic/1001.webp"
+  }
+]

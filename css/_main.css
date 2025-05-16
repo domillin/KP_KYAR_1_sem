@@ -1,0 +1,226 @@
+@charset "UTF-8";
+@font-face {
+  font-family: main;
+  src: url(../fonts/MuseoModerno/MuseoModerno-Italic-VariableFont_wght.ttf);
+  src: url(../fonts/MuseoModerno/MuseoModerno-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: all;
+  src: url(../fonts/Jura/Jura-VariableFont_wght.ttf);
+}
+aside {
+  background: radial-gradient(ellipse farthest-corner at 50% 45%, rgba(255, 255, 255, 0.8) 20%, rgba(9, 35, 28, 0.9) 95%);
+  padding: 50px 0 100px 0;
+}
+
+header {
+  padding-bottom: 300px;
+  background: radial-gradient(ellipse farthest-corner at 50% 45%, rgba(255, 255, 255, 0.8) 20%, rgba(9, 35, 28, 0.9) 95%), url(../pic/3.jpg) center/cover no-repeat;
+}
+
+.flexafter {
+  display: flex;
+}
+
+.first-after-nav {
+  width: 50%;
+  margin: 150px 0 0 100px;
+  font-family: all;
+  color: #495C57;
+  font-size: 50px;
+}
+
+.gradient-button div {
+  display: block;
+}
+
+.gradient-button a {
+  display: inline-block;
+  padding: 1rem 10rem;
+  margin: 300px 0 0 120px;
+  font-family: all;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 500;
+  color: white;
+  border-radius: 5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  background: linear-gradient(90deg, #FFF200, #1A541B);
+  background-size: 115% 200%;
+  cursor: pointer;
+  /* Анимация перехода между градиентами */
+  animation: gradientGo 5s linear infinite;
+}
+
+@keyframes gradientGo {
+  0% {
+    background-position: 100% 0%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+.gradient-button a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+div.about {
+  margin-top: 30px;
+  font-family: all;
+  text-align: center;
+  font-size: 35px;
+  color: #495C57;
+  padding-bottom: 70px;
+}
+
+h1.about {
+  padding-bottom: 30px;
+}
+
+h3.about {
+  padding: 0 60px 0 60px;
+}
+
+.elegant-divider {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #e08600, transparent);
+  border: none;
+  margin: 20px 0 55px 0;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  padding-top: 15px;
+}
+
+.container {
+  position: relative;
+  justify-items: center;
+  width: 100%;
+  font-family: all;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 370px 370px 370px;
+  justify-content: space-around;
+  color: #495C57;
+}
+
+div.box {
+  width: 100%;
+  height: 370px;
+  border-radius: 30px;
+}
+
+div.box {
+  background: linear-gradient(10deg, #8E9A97, #DEDEDE, #fffdca, #DEDEDE, #8E9A97);
+  background-size: 200% 200%;
+  animation: gradientFlow 17s linear infinite;
+  width: 100%;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  75% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+h1.inbox {
+  margin-top: 25px;
+  font-size: 90px;
+}
+
+h3.inbox {
+  margin-top: 20px;
+  font-size: 45px;
+}
+
+h3.inbox2 {
+  font-size: 45px;
+}
+
+@media (max-width: 768px) {
+  header {
+    background: radial-gradient(ellipse farthest-corner at 50% 45%, rgba(255, 255, 255, 0.8) 20%, rgba(9, 35, 28, 0.9) 95%), url(../pic/3.jpg);
+    background-position: 10% 10%;
+    padding-bottom: 180px;
+  }
+  .flexafter {
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+  }
+  .first-after-nav {
+    width: 100%;
+    font-family: all;
+    text-align: center;
+    font-size: 25px;
+    margin: 150px 0 0 0;
+  }
+  .gradient-button a {
+    margin: -15px;
+    padding: 0.5rem 1.5rem;
+    font-size: 3em;
+    cursor: none;
+  }
+  h1.about {
+    font-size: 45px;
+  }
+  h3.about {
+    font-size: 28px;
+  }
+  div.about {
+    padding-bottom: 35px;
+  }
+  .container {
+    font-family: all;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  div.box {
+    width: 75%;
+    height: 270px;
+  }
+  h1.inbox {
+    margin-top: 33px;
+    font-family: all;
+    text-align: center;
+    font-size: 70px;
+  }
+  h3.inbox {
+    margin-top: 29px;
+    font-family: all;
+    text-align: center;
+    font-size: 30px;
+  }
+  h3.inbox2 {
+    font-family: all;
+    text-align: center;
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Макаронс",
+    "price": "3 BYN",
+    "image": "pic/makaroon.avif"
+  },
+  {
+    "name": "Пончик",
+    "price": "1.5 BYN",
+    "image": "pic/pon.avif"
+  },
+  {
+    "name": "Чизкейк",
+    "price": "6.5 BYN / кусочек",
+    "image": "pic/tort2.jpg"
+  },
+  {
+    "name": "Шоколад",
+    "price": "2 BYN / 250г",
+    "image": "pic/choko.webp"
+  },
+  {
+    "name": "Наполеон",
+    "price": "5 BYN / кусочек",
+    "image": "pic/napoleon.jpg"
+  },
+  {
+    "name": "Орешки со сгущенкой",
+    "price": "3 BYN / 200г",
+    "image": "pic/oreshki.jpg"
+  }
+]

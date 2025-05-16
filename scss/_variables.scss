@@ -1,0 +1,85 @@
+//Градиенты:
+$main-nav-gradient:linear-gradient(#4A5C4B 30%,#4a5c4b49);
+$main-infobox-gradient:linear-gradient(10deg, #8E9A97, #DEDEDE, #fffdca,#DEDEDE, #8E9A97);
+$main-header-gradient:radial-gradient(
+        ellipse farthest-corner at 50% 45%,
+        rgba(255, 255, 255, 0.8) 20%, 
+        rgba(9, 35, 28, 0.9) 95%
+    ),
+    url(../pic/3.jpg) center / cover no-repeat;
+$main-aside-gradient:radial-gradient(
+    ellipse farthest-corner at 50% 45%,
+    rgba(255, 255, 255, 0.8) 20%, 
+    rgba(9, 35, 28, 0.9) 95%
+);
+$main-mobile-header:radial-gradient(
+    ellipse farthest-corner at 50% 45%,
+    rgba(255, 255, 255, 0.8) 20%, 
+    rgba(9, 35, 28, 0.9) 95%
+),
+url(../pic/3.jpg);
+$main-button-gradient:linear-gradient(90deg, #FFF200, #1A541B);
+
+
+$menu-item: linear-gradient(0deg, #A9B7A1, #EFEDE4);
+$menu-item-after-grad-animate:linear-gradient(120deg, #00ffab, #007f6c);
+$testimonial-bg:linear-gradient(135deg, #fef0e9, #fff);
+//Цвета:
+
+//main
+$main-text-color:#495C57;
+$divider-color:linear-gradient(90deg, transparent, #e08600, transparent);
+
+//nav+foot
+$nav-bg-color:#4A5C4B;
+$logo-color:#EFE7D6;
+$footer-bg-color:#000;
+$footer-logo-color:#EFE7D6;
+$footer-text-presection-color:#fff;
+$footer-section-color:#aaa;
+$footer-section-hover-color:#fff;
+$footer-all-rights-color:#777;
+$footer-all-rights-border-top-color:#333;
+$scroll-button-bg-color:#a8e6a3; 
+$scroll-button-text-color:white;
+$scroll-button-bg-hover-color:#8cd38c;
+$nav-links-color:white;
+$nav-links-bg-mobile-color:rgba(20, 36, 24, 0.97);
+$nav-links-hover-color:#00ffab;
+$overlay-color: rgba(0, 0, 0, 0.5);
+$popup-shadow:0 4px 12px rgba(0,0,0,0.4);
+
+//menu
+$body-color:#F5F1E6;
+$menu-item-shadow:0 4px 12px rgba(0, 0, 0, 0.3);
+$menu-item-hover-shadow:0 10px 24px rgba(163, 184, 153, 0.9);
+$menu-name-color:#A9845C;
+$menu-price-bg-color:#B89B6A;
+$menu-price-color:#4A382C;
+$menu-buy-button-bg-color:#75C194;
+$menu-buy-button-bg-hover-color:#5CA87C;
+$menu-buy-button-text-color:#3A3A3A;
+$menu-popup-bg-color:#A1EBC8;
+$menu-popup-text-color:#121212;
+
+//team
+$team-body-text-color:#333;
+$up-content-text-color:#222;
+$section-image-shadow:0 10px 20px rgba(0,0,0,0.1);
+$position-text-color:#008080;
+$form-bg-color:white;
+$border-form-elements: 1px solid #ccc;
+$shake-color:red;
+$button-color:#008080;
+$button-hover-color:#006666;
+$testimonial-box-shadow:0 6px 20px rgba(0,0,0,0.1);
+$testimonial-before:#f0c090;
+$testimonial-strong-color:#555;
+$notification-success-bg:#4caf50;
+$notification-error-bg:#f44336;
+$error-input-border-color:red !important;
+$error-input-message-color:red;
+
+$positions-gr-go: 100% 0%, 50% 50%, 0% 100%, 50% 50%, 100% 0%;
+$positions-gr-flow: 0% 0%, 0% 50%, 0% 100%, 0% 50%, 0% 0%;
+$shine-positions: 0% 50%, 100% 50%, 0% 50%;

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASAM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/_main.css">
+    <link rel="stylesheet" href="nav+foot.css">
+</head>
+<body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">ASAM</div>
+        <div class="nav-links">
+            <a href="main.html">Домой</a>
+            <a href="menu.html">Меню</a>
+            <a href="team.html">Команда</a>
+            <a href="cart.html">Корзина</a>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <a href="#"><i class="fa-solid fa-bars" style="color: white;"></i></a>
+        </div>
+    </nav>
+    <div class="overlay" onclick="closeMenu()"></div>
+    <div class="flexafter">
+        <div class="first-after-nav">
+            <h1>ASAM - Ваш шаг к роскошному вкусу</h1>
+        </div>
+        <div class="gradient-button" style="width: 50%;">
+            <a href="menu.html" style="width: initial;">Шагнуть</a>
+        </div>
+    </div>
+    
+    </header>
+  <aside>
+    <button id="scrollToTopBtn" title="Наверх">↑</button>
+    <div class="about" style="margin-top: 0;">
+        <h1 class="about">О нас</h1>
+    <h3 class="about">Мы – команда ценителей, которая отбирает для вас лучшие сорта чая со всего мира. Мы верим, что это не просто напиток, а целая культура, традиции и искусство. В нашем ассортименте — классические и редкие чаи, а также уникальные купажи, созданные для истинных гурманов.</h3>
+    </div>
+    <div class="elegant-divider"></div>
+    <div class="about">
+        <h1 class="about">ASAM- не только название</h1>
+    <h3 class="about">Чай – это напиток, который объединяет людей. Именно поэтому наши заведения открыты для Вас в самых разных уголках мира – от уютных улочек Парижа до шумных рынков Стамбула, от небоскрёбов Нью-Йорка до живописных улиц Киото.
+        Загляните к нам и почувствуйте вкус настоящего чая! </h3>
+    </div>
+    <div class="elegant-divider"></div>
+    <div class="wrapper">
+        <div class="container">
+            <div class="box">
+                <h1 class="inbox">250+</h1>
+                <h3 class="inbox">Заведений по всему миру</h3>
+            </div>
+            <div class="box">
+                <h1 class="inbox">10000</h1>
+                <h3 class="inbox2">Клиентов, чувствующих нашу любовь ежедневно</h3>
+            </div>
+            <div class="box">
+                <h1 class="inbox">550+</h1>
+                <h3 class="inbox">Мастеров своего дела</h3>
+            </div>
+        </div>
+    </div>
+</aside>
+<footer class="footer">
+    <div class="footer-container">
+      
+      <!-- ЛОГОТИП -->
+      <div class="footer-logo">ASAM</div>
+      
+      <!-- КОНТАКТЫ -->
+      <div class="footer-section">
+        <h3>Контакты</h3>
+        <p>Email: contact@asam.com</p>
+        <p>Email: it@belstu.by</p>
+        <p>Тел: 8 (017) 399-3389</p>
+        <p>Адрес: 220006, г. Минск, ул. Свердлова, 13а</p>
+
+        <!-- Социальные иконки -->
+        <div class="social-icons">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.5.5.2.9.5 1.3 1 .4.4.7.8 1 1.3.2.4.4 1 .5 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.5 2.2-.2.5-.5.9-1 1.3-.4.4-.8.7-1.3 1-.4.2-1 .4-2.2.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.5-.5-.2-.9-.5-1.3-1-.4-.4-.7-.8-1-1.3-.2-.4-.4-1-.5-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.5-2.2.2-.5.5-.9 1-1.3.4-.4.8-.7 1.3-1 .4-.2 1-.4 2.2-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1 .1-1.5.2-1.9.4-.5.2-.8.4-1.1.7-.3.3-.6.7-.7 1.1-.2.4-.3.9-.4 1.9-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1 .2 1.5.4 1.9.2.5.4.8.7 1.1.3.3.7.6 1.1.7.4.2.9.3 1.9.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1-.1 1.5-.2 1.9-.4.5-.2.8-.4 1.1-.7.3-.3.6-.7.7-1.1.2-.4.3-.9.4-1.9.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1-.2-1.5-.4-1.9-.2-.5-.4-.8-.7-1.1-.3-.3-.7-.6-1.1-.7-.4-.2-.9-.3-1.9-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.7a5.1 5.1 0 1 1 0 10.2 5.1 5.1 0 0 1 0-10.2zm0 1.8a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.2-2.1a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/>
+            </svg>
+          </a>
+
+          <!-- Telegram -->
+          <a href="https://t.me/" target="_blank" aria-label="Telegram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="#aaa" d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm59.2 83.6l-18.2 85.8c-1.4 6.2-5.1 7.7-10.3 4.8l-28.5-21.1-13.8 13.3c-1.5 1.5-2.8 2.8-5.7 2.8l2-28.7 52.3-47.2c2.3-2 0-3.1-3.5-1.1l-64.6 40.7-27.9-8.7c-6.1-1.9-6.2-6.1 1.3-9l108.9-42.1c5.1-1.9 9.5 1.1 7.9 9z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- ССЫЛКИ -->
+      <div class="footer-section">
+        <h3>Ссылки</h3>
+        <a href="main.html">Домой</a>
+        <a href="menu.html">Меню</a>
+        <a href="team.html">Команда</a>
+      </div>
+    </div>
+
+    <!-- НИЖНЯЯ СТРОКА -->
+    <div class="footer-bottom">
+      All rights reserved "ASAM"
+
+    </div>
+  </footer>
+  <script src='js/main.js'></script>
+</body>
+</html>
