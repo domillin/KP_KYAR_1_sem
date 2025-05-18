@@ -1,0 +1,258 @@
+/* Подключаем шрифты */
+@font-face {
+    font-family: main; /* Даем ему имя, которое мы придумали */
+    src: url(/fonts/MuseoModerno/MuseoModerno-Italic-VariableFont_wght.ttf); /* адрес */
+    src: url(/fonts/MuseoModerno/MuseoModerno-VariableFont_wght.ttf); /* адрес */
+}
+@font-face {
+    font-family: all; /* Даем ему имя, которое мы придумали */
+    src: url(/fonts/Jura/Jura-VariableFont_wght.ttf); /* адрес */
+}
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* задаем шрифт */
+}
+* {
+    margin: 0; /* убираем все отступы */
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex; /* Используем Flexbox для выравнивания элементов по горизонтали */
+    justify-content: space-between; /* Пространство между элементами: логотип слева, меню — справа */
+    align-items: center; /* Выравнивание элементов по вертикали по центру */
+    background-color: #4A5C4B; /* Основной цвет фона */
+    background: linear-gradient(#4A5C4B 30%, #4a5c4b49); /* Градиентный фон: плотный цвет вверху, полупрозрачный внизу */
+    padding: 5px 20px 5px 50px; /* Внутренние отступы: сверху/снизу 5px, справа 20px, слева 50px */
+    position: relative; /* Устанавливаем контекст позиционирования */
+    z-index: 1111; /* Убедимся, что панель навигации находится поверх других элементов */
+}
+.logo {
+    color: #EFE7D6; /* Цвет текста логотипа */
+    font-family: main; /* Название шрифта из @font-face */
+    font-size: 75px; /* Размер шрифта логотипа */
+    font-weight: 200; /* Тонкий шрифт */
+    letter-spacing: 10px; /* Расстояние между буквами логотипа */
+}
+.nav-links {
+    display: flex; /* Располагаем навигационные ссылки в одну строку */
+    gap: 80px; /* Расстояние между ссылками — 80 пикселей */
+}
+
+.nav-links a {
+    color: #EFE7D6; /* Цвет текста ссылок */
+    text-decoration: none; /* Убираем подчёркивание у ссылок */
+    font-size: 40px; /* Размер шрифта */
+    font-family: all; /* из @font-face */
+    transition: 0.3s; /* Плавный переход при наведении */
+    padding-right: 40px; /* Дополнительный отступ справа */
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Цвет текста ссылки при наведении */
+}
+
+.menu-toggle {
+    display: none; /* Элемент скрыт по умолчанию (показывается только на телефонах) */
+    font-size: 32px; /* Размер иконки */
+    color: white; /* Белый цвет иконки */
+    cursor: none; /* для удаления синей подсветки в мобилке (в настольной версии не будет являться ошибкой из-за того, что иконка скрыта) */
+    z-index: 1102; /* Размещение выше других элементов */
+    transition: transform 0.3s ease; /* Плавное вращение */
+}
+
+.menu-toggle.active {
+    transform: rotate(90deg); /* При открытии меню иконка поворачивается на 90 градусов */
+}
+
+.footer {
+    background-color: #000; /* Чёрный фон */
+    padding: 40px 20px 20px; /* Внутренние отступы: сверху 40px, по бокам 20px, снизу 20px */
+}
+.footer-container {
+    display: flex; /* Flexbox */
+    flex-direction: row; /* Основное направление — горизонтальное */
+    justify-content: space-between; /* Равномерное распределение элементов с отступами между ними */
+    align-items: flex-start; /* Выравнивание элементов по верхнему краю */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку при нехватке места */
+    max-width: 1200px; /* Ограничиваем ширину */
+    margin: 0 auto; /* Центрируем контейнер по горизонтали */
+}
+
+.footer-logo {
+    font-size: 50px; /* Размер текста логотипа */
+    font-weight: bold; /* Жирное начертание */
+    margin-bottom: 20px; /* Отступ снизу */
+    font-family: all; /* из @font-face*/
+    color: white; /* Белый цвет текста */
+    align-self: center; /* Центрирование по вертикали внутри flex-контейнера */
+}
+
+.footer-section {
+    display: flex; /* Flexbox для вертикального размещения элементов */
+    flex-direction: column; /* Элементы располагаются сверху вниз */
+    gap: 8px; /* Отступ между элементами внутри секции */
+    margin-bottom: 20px; /* Отступ снизу секции (для расстояния между блоками) */
+}
+
+.footer-section h3 {
+    color: #fff; /* Белый цвет заголовка */
+    font-size: 16px; /* Размер шрифта заголовка */
+    margin-bottom: 10px; /* Отступ снизу от заголовка до следующего элемента */
+}
+/* Стиль для 2 элементов */
+.footer-section a,
+.footer-section p {
+    color: #aaa; /* Цвет текста */
+    font-size: 14px; /* Единый размер шрифта */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+    margin: 0; /* Сброс внешнего отступа */
+}
+
+.footer-section a:hover {
+  color: #fff; /* При наведении цвет меняется на белый */
+}
+
+.social-icons {
+  display: flex; /* Используем Flexbox для горизонтального положения */
+  gap: 16px; /* Расстояние между иконками */
+  margin-top: 10px; /* Отступ сверху для отделения от предыдущих элементов */
+}
+
+.social-icons a svg {
+  width: 24px; /* Ширина иконки */
+  height: 24px; /* Высота иконки */
+  fill: #aaa; /* Цвет иконки */
+  transition: fill 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+.social-icons a:hover svg {
+  fill: #fff; /* При наведении меняет цвет */
+}
+
+.footer-bottom {
+  text-align: center; /* Текст выравнивается по центру */
+  color: #777; /* Цвет текста */
+  font-size: 13px; /* Размер шрифта */
+  margin-top: 40px; /* Отступ сверху для отделения от основного содержимого футера */
+  padding-top: 20px; /* Внутренний отступ сверху */
+  border-top: 1px solid #333; /* Верхняя граница футера темно-серого цвета */
+}
+/* Кнопка "Наверх" */
+#scrollToTopBtn {
+  position: fixed;           /* Кнопка фиксируется внизу справа, ниже - где фиксируется*/
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #a8e6a3; /* Светло-зелёный фон */
+  color: white;              /* Цвет стрелки */
+  border: none;              /* Без рамки */
+  border-radius: 50%;        /* Кнопка круглая */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для объёма */
+  cursor: pointer;           /* Курсор при наведении */
+  font-size: 24px;           /* Размер стрелки */
+  display: none;             /* Скрыта по умолчанию */
+  align-items: center;       /* Выравнивание по центру по вертикали */
+  justify-content: center;   /* Выравнивание по центру по горизонтали */
+  z-index: 999;              /* Поверх других элементов */
+  transition: opacity 0.3s ease; /* Переходы и анимация */
+  animation: fadeInUp 0.3s ease forwards;
+  transition: 0.3s linear;   
+}
+
+/* При наведении меняем фон кнопки */
+#scrollToTopBtn:hover {
+  background-color: #8cd38c; /* Более тёмный зелёный при наведении */
+}
+
+  @media (max-width: 768px) { /* Мобилка */
+    .navbar {
+    padding: 5px 0px; /* Вертикальные отступы 5px сверху и снизу, слева и справа — 0 */
+  }
+
+  .menu-toggle {
+      width: 26%;               /* Занимает 26% ширины родителя */
+      display: inline-block;    /* Строчно-блочный */
+      text-align: center;       /* Текст и содержимое по центру */
+      font-size: 40px;          /* Крупный шрифт — удобно для иконки меню */
+      color: white;             /* Белый цвет текста */
+      text-decoration: none;    /* Без подчеркивания ссылок */
+      z-index: 1112;            /* Очень высокий слой - поверх остальных элементов */
+  }
+
+  .logo {
+      text-align: right; /* Логотип выравнивается по правому краю */
+      flex: 1;           /* Занимает всё доступное пространство в контейнере с flex-контейнером */
+  }
+
+.nav-links {
+    flex-direction: column;       /* Элементы внутри располагаются вертикально */
+    position: fixed;              /* Фиксированное позиционирование — меню всегда на экране */
+    top: 0;                      /* Верхняя граница — верх окна */
+    right: -100%;                /* Скрыто справа за экраном (сдвинуто на 100% ширины вправо) */
+    width: 75%;                  /* Ширина меню — 75% от ширины окна */
+    max-width: 320px;            /* Максимальная ширина — 320px */
+    height: 100%;                /* Высота меню — 100% высоты окна */
+    background-color: rgba(20, 36, 24, 0.97); /* Почти непрозрачный тёмно-зелёный фон */
+    padding: 100px 20px;         /* Отступы: сверху 100px, по бокам 20px */
+    gap: 25px;                   /* Расстояние между дочерними элементами */
+    transition: right 0.4s ease; /* Плавный сдвиг по правому краю при смене состояния */
+    z-index: 1110;               /* Слой поверх большинства элементов */
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.4); /* Тень слева для объёма */
+}
+
+/* Ссылки в меню */
+.nav-links a {
+    color: white;                /* Белый текст */
+    text-decoration: none;       /* Без подчёркивания */
+    font-size: 22px;             /* Размер шрифта */
+    font-weight: 500;            /* Средняя насыщенность шрифта */
+    transition: color 0.3s;      /* Плавный переход цвета */
+}
+
+/* При наведении на ссылку цвет меняется */
+.nav-links a:hover {
+    color: #00ffab;              /* Цвет текста */
+}
+
+/* Активное меню - когда класс active добавлен, меню сдвигается в видимую область */
+.nav-links.active {
+    right: 0;
+}
+
+/* Полупрозрачный оверлей, скрытый по умолчанию */
+.overlay {
+    display: none;               /* Скрыт */
+    position: fixed;             /* Фиксированное позиционирование на весь экран */
+    inset: 0;                   /* Все стороны прижаты к окну (top/right/bottom/left = 0) */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный чёрный фон */
+    z-index: 1101;              /* Ниже меню, но выше обычного контента */
+}
+
+/* Активный оверлей отображается */
+.overlay.active {
+    display: block;
+}
+
+    /* Блокировка прокрутки */
+    body.menu-open {
+        overflow: hidden;
+    }
+    .footer-container {
+    flex-direction: column;  /* Располагает дочерние элементы вертикально */
+    align-items: center;     /* Центрирует элементы по горизонтали (по основной оси)  */
+    text-align: center;      /* Выравнивание текста по центру */
+  }
+
+  .social-icons {
+    margin-left: 110px;      /* Отступ слева — сдвигает блок иконок вправо на 110px */
+  }
+}
+@keyframes fadeIn { /* Анимации появления */
+  0% { opacity: 0} /* Изменяет прозрачность */
+  100% { opacity: 1} /* Изменяет прозрачность */
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); } 
+  100% { opacity: 1; transform: translateY(0); }
+}

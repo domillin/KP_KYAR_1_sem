@@ -1,1 +1,0 @@
-# KP_KYAR_1_sem
